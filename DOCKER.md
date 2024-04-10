@@ -10,6 +10,5 @@ docker run --volume .:/build -it opibuild
 
 ```bash
 cd /build
-apt -y install psmisc acl sudo libnewt0.52 libpopt0 libslang2 whiptail
 ./build.sh
 ```
