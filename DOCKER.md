@@ -3,11 +3,13 @@
 Focal is the newest supported Ubuntu and it is EOL, so we will use Docker
 
 ```bash
-docker run --volume .:/build -it ubuntu:focal-20240216
+sudo apt -y install docker docker-buildx
+docker build . -t opibuild
+docker run --volume .:/build -it opibuild
 ```
 
 ```bash
 cd /build
-apt -y install psmisc
+apt -y install psmisc acl sudo libnewt0.52 libpopt0 libslang2 whiptail
 ./build.sh
 ```
