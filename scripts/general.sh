@@ -701,9 +701,9 @@ prepare_host()
 		fi
 	fi
 
-	if grep -qE "(Microsoft|WSL)" /proc/version; then
-		exit_with_error "Windows subsystem for Linux is not a supported build environment"
-	fi
+	#if grep -qE "(Microsoft|WSL)" /proc/version; then
+	#	exit_with_error "Windows subsystem for Linux is not a supported build environment"
+	#fi
 
 	if [[ -z $codename || "focal" == "$codename" || "eoan" == "$codename"  || "debbie" == "$codename"  || "buster" == "$codename" || "ulyana" == "$codename" ]]; then
 	    hostdeps="${hostdeps/lib32ncurses5 lib32tinfo5/lib32ncurses6 lib32tinfo6}"
